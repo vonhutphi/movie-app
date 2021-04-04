@@ -1,0 +1,96 @@
+.navbarHeader {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 0;
+    left: 0;
+    z-index: 9;
+    box-shadow: 0 0 15px gray;
+    .web-logo {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-50%);
+    }
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        li {
+            display: inline;
+            margin-right: 20px;
+            a {
+                color: black;
+                transition: all 0.2s;
+            }
+            &:hover {
+                a {
+                    text-decoration: none;
+                    color: red;
+                }
+            }
+        }
+    }
+    .nav-right {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        .account {
+            display: flex;
+            align-items: center;
+            a {
+                p {
+                    margin: 0;
+                    font-size: 13px;
+                    padding-right: 11px;
+                    border-right: 1px solid #9b9b9b;
+                    opacity: 0.5;
+                    color: #000;
+                    .user-img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                    }
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .dropdown {
+            display: flex;
+            margin: 0;
+            align-items: center;
+            img {
+                width: 16.6px;
+                height: 16.6px;
+            }
+            .location-icon {
+                margin-left: 11px;
+                position: relative;
+            }
+            .selectMenu {
+                padding: 2%;
+                font-size: 13px;
+                opacity: 0.5;
+                padding-right: 25px;
+                padding-left: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.selectMenu {
+    background-image: url("./../../assets/images/dropdown-icon.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px);
+    overflow: hidden;
+}

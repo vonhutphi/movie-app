@@ -1,0 +1,203 @@
+#showTime {
+    .showTimeMain {
+        max-width: 940px;
+        margin: auto;
+        // border: 1px solid grey;
+        border-radius: 4px;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.14);
+        .showTimeImg {
+            width: 50px;
+            height: 50px;
+        }
+        .cineAddress {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            .cineName {
+                font-size: 14px;
+            }
+            .address {
+                font-size: 12px;
+                color: #949494;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .detail {
+                color: #fb4226 !important;
+                font-size: 12px;
+            }
+        }
+        .showTimeInfo {
+            float: left;
+            clear: both;
+            padding-bottom: 17px;
+            padding-top: 20px;
+            padding-right: 15px;
+            padding-left: 20px;
+            width: 100%;
+            position: relative;
+            margin-bottom: 0;
+            border: none;
+            .movieInfo {
+                float: left;
+                clear: both;
+                cursor: pointer;
+                img {
+                    width: 50px;
+                    float: left;
+                    height: 50px;
+                    object-fit: cover;
+                }
+                .filmInfo {
+                    display: inline-block;
+                    padding-top: 6px;
+                    padding-left: 15px;
+                    .rated {
+                        display: inline-block;
+                        text-align: center;
+                        color: white;
+                        font-weight: 700;
+                        min-width: 33px;
+                        padding: 0 5px;
+                        line-height: 22px;
+                        text-align: center;
+                        border-radius: 4px;
+                        background-color: #00ac4d;
+                        margin-right: 5px;
+                        font-size: 14px;
+                    }
+                    .movieTitle {
+                        font-size: 14px;
+                        line-height: 22px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: #000;
+                    }
+                    .movieLength {
+                        margin: 0;
+                        line-height: 1.7;
+                        font-size: 12px;
+                        color: #9b9b9b;
+                    }
+                }
+            }
+            .movieSession {
+                float: left;
+                clear: both;
+                width: 100%;
+                transition: height 0.3s ease-in-out;
+                .listTypeTime {
+                    padding-top: 15px;
+                    .version {
+                        float: left;
+                        width: 100%;
+                        font-size: 16px;
+                        color: #000;
+                        margin-bottom: 5px;
+                    }
+                    .session {
+                        width: calc(25% - 10px);
+                        float: left;
+                        font-size: 14px;
+                        font-weight: 400;
+                        margin: 0 10px 10px 0;
+                        padding: 5px 0;
+                        transition: all 0.2s;
+                        text-decoration: none;
+                        display: block;
+                        text-align: center;
+                        background-color: rgba(246, 246, 246, 0.5);
+                        border-radius: 7px;
+                        color: #9b9b9b;
+                        border: 1px solid #e4e4e4;
+                        .startTime {
+                            font-size: 18px;
+                            font-weight: 500;
+                            color: #108f3e;
+                            transition: all 0.2s;
+                        }
+                        &:hover {
+                            .startTime {
+                                color: #fb4226;
+                            }
+                        }
+                    }
+                }
+            }
+            &::after {
+                content: "";
+                display: block;
+                width: calc(100% - 40px);
+                border-top: 1px solid rgba(238, 238, 238, 0.88);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+.ant-tabs-left > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane,
+.ant-tabs-left > div > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane {
+    padding: 0;
+}
+// .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list{
+//     width: 200px;
+// }
+.ant-tabs-content-holder {
+    .ant-tabs > .ant-tabs-nav {
+        width: 300px;
+    }
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    width: 100%;
+}
+.ant-tabs-tab-btn {
+    width: 100%;
+}
+.ant-tabs > .ant-tabs-nav {
+    overflow-y: auto;
+    height: 705px;
+}
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+    opacity: 0.5;
+    transition: all .3s;
+    &:hover{
+        color: black;
+        opacity: 1;
+    }
+}
+.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab.ant-tabs-tab-active {
+    opacity: 1;
+    border: none !important;
+}
+.ant-tabs-ink-bar {
+    display: none;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: black;
+}
+// .ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations{
+//     display: none;
+// }
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-more {
+    display: none;
+}
+.ant-tabs > .ant-tabs-nav::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.ant-tabs > .ant-tabs-nav::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px red;
+    background-color: rgba(128, 128, 128, 0.24);
+}
+
+/* Handle */
+.ant-tabs > .ant-tabs-nav::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 10px;
+}

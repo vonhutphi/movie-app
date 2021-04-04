@@ -1,0 +1,68 @@
+#homeApp {
+    padding: 120px 0 80px 0;
+    background: url("./../../assets/images/backapp.jpg");
+    background-size: contain;
+    // background-repeat: no-repeat;
+    .mainHomeApp {
+        max-width: 940px;
+        margin: auto;
+        .left {
+            padding-top: 60px;
+            p {
+                margin: 0 0 10px;
+            }
+            .textLeft {
+                color: #fff;
+                font-weight: 700;
+                font-size: xx-large;
+            }
+            .textSmallLeft {
+                color: #fff;
+                font-size: medium;
+            }
+            .buttonLeft{
+                background-color: #fb4226;
+                border: 1px solid #fb4226;
+                padding: 10px 20px;
+                color: #fff;
+                font-weight: 700;
+                border-radius: 4px;
+                font-size: medium;
+            }
+            .textAppUnder{
+                color: #fff;
+                padding-top: 10px;
+                a{
+                    color: #fff;
+                    border-bottom: 1px solid #fff;
+                    &:hover{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .right{
+            padding: 0;
+            position: relative;
+            .phone-img{
+                padding: 0px 28%;
+                height: 470px;
+                display: block;
+            }
+            .slick-slider{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 1.9% 27.9% 0% 29.4%;
+                .slick-list{
+                    border-radius: 25px;
+                    img{
+                      display: block;
+                    }
+                }
+            }
+        }
+    }
+}

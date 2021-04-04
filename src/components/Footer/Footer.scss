@@ -1,0 +1,89 @@
+#footer {
+    padding: 20px 0;
+    background-color: #222;
+    .footerMain {
+        max-width: 940px;
+        margin: auto;
+        .row {
+            margin: 0;
+        }
+        .top {
+            .noPaddingLeft {
+                padding-left: 0;
+            }
+            .tix > div {
+                padding: 0;
+                a {
+                    display: block;
+                    font-size: 12px;
+                    color: #949494;
+                    font-weight: 700;
+                    line-height: 2.3;
+                    transition: all 0.2s;
+                    &:hover {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
+            .title {
+                color: white;
+                margin-bottom: 10px;
+                font-size: 80%;
+            }
+            .partners {
+                .linePartner {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                    a {
+                        transition: all 0.2s;
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                        }
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+            .social-app {
+                a {
+                    img {
+                        height: 30px;
+                        width: auto;
+                        margin: 5px;
+                    }
+                }
+            }
+        }
+        .hrFooter {
+            width: 100%;
+            border-top: 1px solid #949494;
+            margin: 20px 0;
+        }
+        .bottom {
+            .zion {
+                padding: 0;
+            }
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+            .contact {
+                color: #949494;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.8;
+                p:first-child{
+                    color: #fff;
+                }
+                span{
+                    color: #FB4226;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+#homeTool {
+    height: 80px;
+    max-width: 940px;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px gray;
+    .w30p {
+        width: 30%;
+    }
+    .smallBlock {
+        width: calc(70% / 4);
+    }
+    .selectMenu {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 100%;
+        padding: 7%;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+    #btnBuy {
+        font-size: 14px;
+        color: white;
+        background-color: #4a4a4a;
+        text-transform: uppercase;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+}
+#homeTool > div {
+    position: relative;
+    &::after {
+        content: "";
+        height: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-right: 1px solid #fff;
+        border-right-color: rgba(238, 238, 238, 0.88);
+        z-index: 9;
+    }
+}
