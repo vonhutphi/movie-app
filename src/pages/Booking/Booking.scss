@@ -1,0 +1,176 @@
+#bookingTicket {
+    .theaterSeat {
+        // height: 100%;
+        .theaterSeatHeader {
+            position: fixed;
+            width: 75%;
+            top: 0;
+            left: 0;
+            padding: 0px 30px;
+            background-color: white;
+            box-shadow: -10px 0px 10px 3px #88888881;
+            // position: fixed;
+            // top: 0;
+            // left: 0;
+            z-index: 3;
+            .nav-tabs,
+            .nav-link {
+                border: none;
+                font-weight: bold;
+            }
+            .nav-link {
+                color: black;
+                height: 100%;
+                letter-spacing: 1px;
+                padding: 20px 0px;
+                border-top: 2px solid transparent;
+                border-radius: unset;
+                transition: all 0.3s;
+                margin-right: 20px;
+            }
+
+            .nav-link.active {
+                color: #fb4226;
+                border-top: 2px solid #fb4226;
+            }
+        }
+        .theaterSeatContent {
+            // float: left;
+            width: 80%;
+            height: 100%;
+            margin: auto;
+            margin-top: 90px;
+            z-index: 1;
+            #pickSeat {
+                .someInfo {
+                    .countDown .timer {
+                        font-size: 26px;
+                        font-weight: 500;
+                        color: #fb4226;
+                    }
+                }
+                .screen {
+                    img {
+                        width: 100%;
+                    }
+                }
+                .seats {
+                    height: 100%;
+                    .seat {
+                        border-radius: 50%;
+                        width: 28px;
+                        height: 28px;
+                        background-color: #b2bec3;
+                        margin: 7px;
+                        padding: 2px 4px;
+                        &:focus {
+                            box-shadow: none;
+                        }
+                    }
+                    .gheVip {
+                        background-color: #fdcb6e;
+                    }
+                    .gheDaDat {
+                        background-color: #c0392b;
+                        cursor: no-drop !important;
+                    }
+                    .gheDangDat {
+                        background-color: #1abc9c;
+                    }
+                }
+                .annotate {
+                    margin-top: 20px;
+                    .anno {
+                        margin-right: 10px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                    }
+                    .vip {
+                        background-color: #fdcb6e;
+                    }
+                    .booked {
+                        background-color: #c0392b;
+                    }
+                    .booking {
+                        background-color: #1abc9c;
+                    }
+                    .notBeenBooked {
+                        background-color: #b2bec3;
+                    }
+                }
+            }
+            #bookingDetail {
+                height: 100vh;
+                .bookingDetailMain {
+                    width: 400px;
+                    margin: auto;
+
+                    box-shadow: 0 0 0 0 rgba(51, 51, 51, 0.164);
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+    .filmInfo {
+        // height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 5;
+        padding: 0 45px;
+        box-shadow: 10px 10px 20px 10px #88888881;
+        .filmAddress {
+            .totalPrice {
+                margin-top: 20px;
+            }
+            img {
+                display: block;
+                // margin: auto;
+                border-radius: 6px;
+                height: 200px;
+            }
+            .filmName {
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+        }
+        .seatInfo {
+            margin-top: 30px;
+            p {
+                display: inline;
+                margin-right: 10px;
+                color: #fb4226;
+                font-weight: bold;
+            }
+        }
+        .datVe {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            .btnDatVe {
+                color: white;
+                font-size: 1.5rem;
+                width: 100%;
+                padding: 20px 0;
+                border-radius: 0;
+                background-color: #1abc9c;
+                transition: all 0.3s;
+                &:focus {
+                    box-shadow: none;
+                }
+                &:hover {
+                    background-color: #16a085;
+                }
+            }
+            .btnChuaDat {
+                background-color: #95a5a6;
+                &:hover {
+                    background-color: #95a5a6;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+export const GET_BOOKING_DETAIL_REQUEST = 'getBookingDetailRequest/GET_BOOKING_DETAIL_REQUEST'
+export const GET_BOOKING_DETAIL_SUCCESS = 'getBookingDetailSuccess/GET_BOOKING_DETAIL_SUCCESS'
+export const GET_BOOKING_DETAIL_FAILED = 'getBookingDetailFailed/GET_BOOKING_DETAIL_FAILED'
+export const BOOK_TICKET = 'BOOK_TICKET'

@@ -1,4 +1,5 @@
 #showTime {
+    padding: 50px 0;
     .showTimeMain {
         max-width: 940px;
         margin: auto;
@@ -147,11 +148,11 @@
 // .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list{
 //     width: 200px;
 // }
-.ant-tabs-content-holder {
-    .ant-tabs > .ant-tabs-nav {
-        width: 300px;
-    }
-}
+// .ant-tabs-content-holder {
+//     .ant-tabs > .ant-tabs-nav {
+//         width: 300px;
+//     }
+// }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     width: 100%;
 }
@@ -164,11 +165,19 @@
 }
 .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
     opacity: 0.5;
-    transition: all .3s;
-    &:hover{
+    transition: all 0.3s;
+    &:hover {
         color: black;
         opacity: 1;
     }
+}
+// .ant-tabs-tab{
+//     opacity: 0.5;
+//     transition: all .3s;
+// }
+.ant-tabs-tab:hover {
+    color: black;
+    opacity: 1; 
 }
 .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab.ant-tabs-tab-active {
     opacity: 1;
@@ -177,7 +186,7 @@
 .ant-tabs-ink-bar {
     display: none;
 }
-.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: black;
 }
 // .ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations{

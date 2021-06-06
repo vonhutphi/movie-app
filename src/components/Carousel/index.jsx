@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import '../../../node_modules/slick-carousel/slick/slick.scss'
+import "../../../node_modules/slick-carousel/slick/slick.scss";
 
 import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
 // import HomeTool from "./../HomeTool";
-import './Carousel.scss'
+import "./Carousel.scss";
 export default class Carousel extends Component {
   render() {
     const settings = {
@@ -13,14 +13,14 @@ export default class Carousel extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      // autoplay: true,
-      autoplaySpeed: 1000,
+      autoplay: true,
+      autoplaySpeed: 1500,
     };
     return (
       <div className="nowShowing col-xs-12 	d-none d-sm-block">
         <Slider className="carousel" {...settings}>
           <div className="sliderTrailer">
-            <a href="#">
+            <a href="https://www.youtube.com/watch?v=fNE3wgaHr18">
               <img
                 src={require("./../../assets/images/carousel3.jpg").default}
                 alt=""
@@ -28,7 +28,10 @@ export default class Carousel extends Component {
               <div className="overlay"></div>
               <div className="play-button">
                 {/* <i class="fa fa-play"></i> */}
-                <img src={require('./../../assets/images/play-video.png').default} alt=""/>
+                <img
+                  src={require("./../../assets/images/play-video.png").default}
+                  alt=""
+                />
               </div>
             </a>
           </div>
@@ -36,7 +39,6 @@ export default class Carousel extends Component {
             <img
               src={require("./../../assets/images/carousel2.png").default}
               alt=""
-              
             />
             <div className="overlay"></div>
           </div>
@@ -44,7 +46,6 @@ export default class Carousel extends Component {
             <img
               src={require("./../../assets/images/carousel1.jpg").default}
               alt=""
-     
             />
             <div className="overlay"></div>
           </div>

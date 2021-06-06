@@ -1,22 +1,25 @@
 import React from "react";
-import './HomeTool.scss'
-export default function HomeTool() {
+import "./HomeTool.scss";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
+function HomeTool(props) {
+  const { danhSachPhim } = props;
   return (
     <div id="homeTool" className="row d-none d-lg-flex d-xl-flex">
       <div className="selectFilm w30p ">
         <div className="dropdown selectMenu " data-toggle="dropdown">
-          Phim  
+          Phim
         </div>
-        <div className="dropdown-menu">
-          <a className="dropdown-item" href="#">
-            Link 1
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 2
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 3
-          </a>
+        <div className="dropdown-menu menuPhim">
+          {danhSachPhim &&
+            danhSachPhim.map((phim, i) => {
+              return (
+                <Link key={i} className="dropdown-item" to='/'>
+                  {phim.tenPhim}
+                </Link>
+              );
+            })}
         </div>
       </div>
       <div className="selectCinema smallBlock">
@@ -24,15 +27,9 @@ export default function HomeTool() {
           Rạp
         </div>
         <div className="dropdown-menu">
-          <a className="dropdown-item" href="#">
+          <Link className="dropdown-item" to="/">
             Link 1
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 2
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 3
-          </a>
+          </Link>
         </div>
       </div>
       <div className="selectDate smallBlock">
@@ -40,15 +37,9 @@ export default function HomeTool() {
           Ngày xem
         </div>
         <div className="dropdown-menu">
-          <a className="dropdown-item" href="#">
+          <Link className="dropdown-item" to="/">
             Link 1
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 2
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 3
-          </a>
+          </Link>
         </div>
       </div>
       <div className="selectSession smallBlock">
@@ -56,15 +47,9 @@ export default function HomeTool() {
           Suất chiếu
         </div>
         <div className="dropdown-menu">
-          <a className="dropdown-item" href="#">
+          <Link className="dropdown-item" to="/">
             Link 1
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 2
-          </a>
-          <a className="dropdown-item" href="#">
-            Link 3
-          </a>
+          </Link>
         </div>
       </div>
       <div className="buyTicket smallBlock">
@@ -75,3 +60,9 @@ export default function HomeTool() {
     </div>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    danhSachPhim: state.listMovieReducer.data,
+  };
+};
+export default connect(mapStateToProps, null)(HomeTool);

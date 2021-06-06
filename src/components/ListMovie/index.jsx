@@ -12,9 +12,10 @@ function ListMovie(props) {
   // console.log(props);
   useEffect(() => {
     return props.fetchListMovie();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const renderHTML = () => {
-    const { loading, data } = props;
+    const {  data } = props;
     // if (loading) return <Loader />;
     return (
       data &&

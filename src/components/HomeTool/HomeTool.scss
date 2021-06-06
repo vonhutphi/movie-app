@@ -25,6 +25,11 @@
         padding-right: 20px;
         cursor: pointer;
     }
+    .dropdown-menu {
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 3;
+    }
     #btnBuy {
         font-size: 14px;
         color: white;
@@ -37,7 +42,6 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
-        
     }
 }
 #homeTool > div {

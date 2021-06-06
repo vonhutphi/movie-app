@@ -1,5 +1,6 @@
 import React from "react";
 import './Footer.scss'
+import {Link} from 'react-router-dom'
 export default function Footer() {
   return (
     <div id="footer">
@@ -9,185 +10,185 @@ export default function Footer() {
             <p className="title">TIX</p>
             <div className="row">
               <div className="col-sm-6 col-6 noPaddingLeft">
-                <a href="#">FAQ</a>
-                <a href="#">Brand Guidelines</a>
+                <Link to='/'>FAQ</Link>
+                <Link to='/'>Brand Guidelines</Link>
               </div>
               <div className="col-sm-6 col-6 noPaddingLeft">
-                <a href="#">Thỏa thuận sử dụng</a>
-                <a href="#">Chính sách bảo mật</a>
+                <Link to='/'>Thỏa thuận sử dụng</Link>
+                <Link to='/'>Chính sách bảo mật</Link>
               </div>
             </div>
           </div>
           <div className="partners col-sm-4">
             <p className="title">ĐỐI TÁC</p>
             <div className="row col-12 col-sm-12 linePartner noPaddingLeft">
-              <a href="#">
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/cgv.png").default}
                   alt=""
                   style={{ backgroundColor: "#fff" }}
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/bhd.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/galaxycine.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/cinestar.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/rap-lotte.png").default}
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="row col-12 col-sm-12 linePartner noPaddingLeft">
-              <a href="#">
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/megags.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/bt.jpg").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={
                     require("./../../assets/images/dongdacinema.png").default
                   }
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/TOUCH.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/cnx.jpg").default}
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="row col-12 col-sm-12 linePartner noPaddingLeft">
-              <a href="#">
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/STARLIGHT.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/dcine.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={
                     require("./../../assets/images/zalopay_icon.png").default
                   }
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/payoo.jpg").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/VCB.png").default}
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="row col-12 col-sm-12 linePartner noPaddingLeft">
-              <a href="#">
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/AGRIBANK.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/VIETTINBANK.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/IVB.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/123go.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/laban.png").default}
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="social-app col-sm-4 row">
             <div className="col-sm-6 text-center">
               <p className="title">MOBILE APP</p>
-              <a href="#">
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/apple-logo.png").default}
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={
                     require("./../../assets/images/android-logo.png").default
                   }
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="col-sm-6 text-center">
               <p className="title">SOCIAL</p>
-              <a href="#">
+              <Link to='/'>
                 <img
                   src={
                     require("./../../assets/images/facebook-logo.png").default
                   }
                   alt=""
                 />
-              </a>
-              <a href="#">
+              </Link>
+              <Link to='/'>
                 <img
                   src={require("./../../assets/images/zalo-logo.png").default}
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

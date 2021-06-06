@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { newsDienAnh } from "./NewsData/dienAnh";
 import NewsItem from "./NewsItem/NewsItem";
 import './News.scss'

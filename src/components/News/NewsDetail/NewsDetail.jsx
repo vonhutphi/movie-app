@@ -10,7 +10,7 @@ export default function NewsDetail(props) {
       <p className="desc">{news.desc}</p>
       <div className="social">
         <div className="social-like">
-          <a href="#" className="like">
+          <a href="#listMovie" className="like">
             <img
               src={require("./../../../assets/images/like.png").default}
               alt=""
@@ -19,7 +19,7 @@ export default function NewsDetail(props) {
           </a>
         </div>
         <div className="social-comment">
-          <a href="#" className="comment">
+          <a href="#listMovie" className="comment">
             <img
               src={require("./../../../assets/images/comment.png").default}
               alt=""

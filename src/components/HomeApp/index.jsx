@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
-import './HomeApp.scss'
+import "./HomeApp.scss";
 import "../../../node_modules/slick-carousel/slick/slick.scss";
 import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
-
+import { Link } from "react-router-dom";
 export default function HomeApp() {
   const settings = {
     dots: false,
@@ -12,12 +12,12 @@ export default function HomeApp() {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    autoplay:true,
+    autoplay: true,
     autoplaySpeed: 1000,
   };
 
   return (
-    <div className='col-xs-12 block' id="homeApp">
+    <div className="col-xs-12 block" id="homeApp">
       <div className="mainHomeApp">
         <div className="row">
           <div className="col-md-6 left">
@@ -32,8 +32,8 @@ export default function HomeApp() {
             <button className="buttonLeft">App miễn phí - Tải về ngay!</button>
             <p className="textAppUnder">
               TIX có hai phiên bản &nbsp;&nbsp;
-              <a href="#">IOS</a> &nbsp;&nbsp;&&nbsp;&nbsp;
-              <a href="#">Android</a>
+              <Link to="/">IOS</Link> &nbsp;&nbsp;&&nbsp;&nbsp;
+              <Link to="/">Android</Link>
             </p>
           </div>
           <div className="col-md-6 right">

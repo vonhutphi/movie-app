@@ -1,0 +1,99 @@
+.phimInfo {
+    // padding-top: 100px;
+    // padding-bottom: 100px;
+    // max-width: 940px;
+    // margin: auto;
+    // margin-top: 60px;
+    // margin-bottom: 60px;
+    position: relative;
+    .thongTinChiTietPhim {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 870px;
+        z-index: 9;
+        .filmDetailImage {
+            img {
+                width: 100%;
+                border-radius: 4px;
+            }
+        }
+        .filmDetailInfo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+            p {
+                margin: 0;
+            }
+            .filmTitle {
+                font-size: 24px;
+                line-height: 1;
+            }
+            .rated {
+                display: inline-block;
+                text-align: center;
+                color: white;
+                font-weight: 700;
+                min-width: 33px;
+                padding: 0 5px;
+                line-height: 22px;
+                text-align: center;
+                border-radius: 4px;
+                background-color: #00ac4d;
+                margin-right: 5px;
+                font-size: 14px;
+            }
+            .btnMuaVe {
+                margin-top: 1rem;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-weight: 400;
+                color: white;
+                line-height: 1.5;
+                text-transform: uppercase;
+                background-color: #fb4226;
+                border: none;
+                transition: all 0.2s;
+                z-index: 2;
+                &:focus {
+                    border: none;
+                }
+                &:hover {
+                    background-color: #8a2211;
+                }
+                &:active {
+                    background-color: #8a2211;
+                }
+            }
+        }
+    }
+
+    .filmBg {
+        // position: absolute;
+        // left: 0;
+        // top: 60px;
+        .phimBg {
+            width: 100%;
+            height: 500px;
+            z-index: 4;
+            img {
+                filter: blur(15px);
+                margin: -11px 0 -5px -10px;
+                width: calc(100% + 5px);
+                height: 94%;
+            }
+        }
+        .phimBgLayer {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            background: linear-gradient(to top, rgb(10, 32, 41), transparent 100%);
+        }
+    }
+}
