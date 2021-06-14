@@ -11,11 +11,14 @@ import ShowTime from "../../components/ShowTime";
 // import Loading from "../../components/Loading";
 function HomePage(props) {
   //   const loading = useSelector((state) => state.listMovieReducer.loading);
+  const goToBookingPage = (maLichChieu) => {
+    props.history.push(`/dat-ve/${maLichChieu}`);
+  };
   return (
     <>
       <NavbarHome />
       <Carousel />
-      <HomeTool />
+      <HomeTool goToBookingPage={goToBookingPage} />
       <ListMovie />
       <ShowTime />
       <News />
