@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./HomeTool.scss";
 import { Link } from "react-router-dom";
-import { connect, useSelector, useDispatch } from "react-redux";
+import { connect } from "react-redux";
 import { actGetMovieDetailApi } from "../../pages/DetailPage/modules/action";
 import moment from "moment";
 function HomeTool(props) {
@@ -15,8 +15,9 @@ function HomeTool(props) {
     film && props.fetchMovieDetail(film.maPhim);
     setTheater(null);
     setTime(null);
-    setTheater(null)
-    setDay(null)
+    setTheater(null);
+    setDay(null);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [film]);
   const renderTheater = () => {
     let theaterArr = [];
@@ -28,6 +29,9 @@ function HomeTool(props) {
           theaterArr.push(lc);
         });
       });
+    if (!film) {
+      return <div className="dropdown-item">No data</div>;
+    }
     return theaterArr.map((lc, idx) => {
       return (
         <div className="dropdown-item" key={idx} onClick={() => setTheater(lc)}>
@@ -43,6 +47,9 @@ function HomeTool(props) {
       dates.push(current.format("YYYY-MM-DD"));
       current.add(1, "day");
     }
+    if (!film || !theater) {
+      return <div className="dropdown-item">No data</div>;
+    }
     return (
       theater &&
       dates.map((date, ix) => {
@@ -56,6 +63,9 @@ function HomeTool(props) {
     );
   };
   const renderTime = () => {
+    if (!film || !theater || !day) {
+      return <div className="dropdown-item">No data</div>;
+    }
     return (
       theater &&
       theater.lichChieuPhim.map((tgc, i) => {
@@ -68,13 +78,15 @@ function HomeTool(props) {
         // console.log("diff", moment.duration(startDate.diff(endDate)).asDays());
         var duration = endDate.diff(startDate, "days");
         // console.log("dur", duration);
-        
+
         if (duration === 0) {
           return (
             <div key={i} className="dropdown-item" onClick={() => setTime(tgc)}>
               {moment(tgc.ngayChieuGioChieu).format("HH:mm")}
             </div>
           );
+        } else {
+          return null;
         }
       })
     );
@@ -127,8 +139,11 @@ function HomeTool(props) {
       <div className="buyTicket smallBlock">
         <button
           id="btnBuy"
-          className="btn btn-primary"
-          onClick={()=>props.goToBookingPage(time.maLichChieu)}
+          className={`btn btn-primary ${
+            theater && film && day && time ? "search" : "no-search"
+          }`}
+          onClick={() => props.goToBookingPage(time.maLichChieu)}
+          disabled={!theater || !film || !day || !time}
         >
           Mua vé ngay
         </button>

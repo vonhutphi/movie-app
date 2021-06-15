@@ -59,6 +59,15 @@
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    #btnBuy.search {
+        background-color: #fb4226;
+    }
+    #btnBuy.no-search{
+        cursor: not-allowed;
     }
 }
 #homeTool > div {
