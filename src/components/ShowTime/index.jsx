@@ -166,7 +166,13 @@ function ShowTime(props) {
                                                     if (duration === 0) {
                                                       return (
                                                         <Link
-                                                          to={`/dat-ve/${tgc.maLichChieu}`}
+                                                          to={
+                                                            localStorage.getItem(
+                                                              "User"
+                                                            )
+                                                              ? `/dat-ve/${tgc.maLichChieu}`
+                                                              : "/dang-nhap"
+                                                          }
                                                           className="session"
                                                           key={index5}
                                                         >
