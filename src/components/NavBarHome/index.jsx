@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { tinhThanh } from "./cityProvince.js";
 export default function NavbarHome() {
   const [city, setCity] = useState("Hồ Chí Minh");
+  const [logOut, setLogOut] = useState(false);
   return (
     <div className="navbarHeader">
       <Link to="/">
@@ -26,7 +27,11 @@ export default function NavbarHome() {
         </li>
       </ul>
       <div className="nav-right">
-        <div className="account">
+        <div
+          className="account"
+          onMouseEnter={() => setLogOut(true)}
+          onMouseLeave={() => setLogOut(false)}
+        >
           <Link to={!localStorage.getItem("User") ? "/dang-nhap" : "/"}>
             <p>
               <img
@@ -40,6 +45,23 @@ export default function NavbarHome() {
                 : "Đăng nhập"}
             </p>
           </Link>
+          {localStorage.getItem("User") && (
+            <div
+              className="logOutButton"
+              style={{
+                display: `${logOut ? "block" : "none"}`,
+              }}
+            >
+              <button
+                onClick={() => {
+                  localStorage.clear();
+                  window.location.reload();
+                }}
+              >
+                Đăng xuất
+              </button>
+            </div>
+          )}
         </div>
         <div className="selectLocation dropdown">
           <img

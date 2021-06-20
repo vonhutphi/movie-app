@@ -43,9 +43,20 @@
         display: flex;
         align-items: center;
         .account {
+            position: absolute;
+            top: 50%;
+            left: -80%;
+            transform: translateY(-50%);
+            height: 90px;
+            width: 110px;
             display: flex;
             align-items: center;
+
             a {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
                 p {
                     margin: 0;
                     font-size: 13px;
@@ -62,6 +73,22 @@
                 }
                 &:hover {
                     text-decoration: none;
+                }
+            }
+            .logOutButton {
+                position: absolute;
+                top: 76%;
+                left: 50%;
+                transform: translateX(-50%);
+                text-align: center;
+                width: 150%;
+                button {
+                    border: none;
+                    padding: 5px 15px;
+                    border-radius: 5px;
+                    &:hover{
+                        background-color: #636e72;
+                    }
                 }
             }
         }
@@ -84,6 +111,7 @@
                 padding-right: 25px;
                 padding-left: 5px;
                 cursor: pointer;
+                width: 108px;
             }
             .dropdown-menu::-webkit-scrollbar-track {
                 box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);

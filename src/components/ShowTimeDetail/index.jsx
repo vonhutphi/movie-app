@@ -71,7 +71,7 @@ function ShowTimeDetail({ movieDetail, theaterSystemArray, ...props }) {
       dates.push(current.format("YYYY-MM-DD"));
       current.add(1, "day");
     }
-    console.log("dates", dates);
+    // console.log("dates", dates);
     return (
       <div className="showtime__detail">
         <Tabs defaultActiveKey="0">
