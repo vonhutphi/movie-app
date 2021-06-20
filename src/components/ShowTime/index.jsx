@@ -17,23 +17,21 @@ function ShowTime(props) {
     // if(phim.MaPhim === maPhim){
     phim.lstLichChieuTheoPhim.forEach((tgc) => {
       let thoiGian = new Date(tgc.ngayChieuGioChieu);
+      // console.log('thoiGian',thoiGian)
       let thoiGianChieu = moment(thoiGian).format("DD.MM.YYYY");
-
-      var now = moment(new Date()).format("DD.MM.YYYY"); //todays date
-      // console.log('now', now, "thoiGianChieu", thoiGianChieu);
+      var now = moment(new Date().toLocaleDateString()).format("DD.MM.YYYY"); //todays date
+      // console.log("now", now);
       var startDate = moment(thoiGianChieu, "DD.MM.YYYY");
+      // console.log("startDate", startDate);
       var endDate = moment(now, "DD.MM.YYYY");
+      // console.log("endDate", endDate);
       var duration = endDate.diff(startDate, "days");
-
-      // let thoiGianChieu = new Date(tgc.ngayChieuGioChieu);
-      // let now = new Date();
-      // let duration = thoiGianChieu - now
+      // console.log('duration',duration)
       if (duration === 0) {
         mangLC.push(duration);
       }
     });
-    // console.log(mangLC);
-    // }
+    // console.log("mangLC ", mangLC);
     if (mangLC.length > 0) {
       return true;
     }
@@ -98,6 +96,8 @@ function ShowTime(props) {
                               return (
                                 lc.danhSachPhim &&
                                 lc.danhSachPhim.map((phim, index4) => {
+                                  // console.log("phim", phim);
+
                                   if (checkLichchieu(phim)) {
                                     return (
                                       <div
@@ -136,34 +136,65 @@ function ShowTime(props) {
                                               {phim &&
                                                 phim.lstLichChieuTheoPhim.map(
                                                   (tgc, index5) => {
-                                                    return (
-                                                      <Link
-                                                        to={`/dat-ve/${tgc.maLichChieu}`}
-                                                        className="session"
-                                                        key={index5}
-                                                      >
-                                                        <span className="startTime">
-                                                          {convertTime12To24(
-                                                            new Date(
-                                                              tgc.ngayChieuGioChieu
-                                                            ).toLocaleTimeString()
-                                                          )}
-                                                          {/* {moment(new Date(tgc.ngayChieuGioChieu.to))} */}
-                                                          {/* {new Date(tgc.ngayChieuGioChieu).toLocaleTimeString()} */}
-                                                        </span>
-                                                        ~
-                                                        <span className="endTime">
-                                                          {calculateEndTime(
-                                                            convertTime12To24(
+                                                    let thoiGian = new Date(
+                                                      tgc.ngayChieuGioChieu
+                                                    );
+
+                                                    let thoiGianChieu =
+                                                      moment(thoiGian).format(
+                                                        "DD.MM.YYYY"
+                                                      );
+                                                    var now = moment(
+                                                      new Date().toLocaleDateString()
+                                                    ).format("DD.MM.YYYY"); //todays date
+
+                                                    var startDate = moment(
+                                                      thoiGianChieu,
+                                                      "DD.MM.YYYY"
+                                                    );
+
+                                                    var endDate = moment(
+                                                      now,
+                                                      "DD.MM.YYYY"
+                                                    );
+
+                                                    var duration = endDate.diff(
+                                                      startDate,
+                                                      "days"
+                                                    );
+
+                                                    if (duration === 0) {
+                                                      return (
+                                                        <Link
+                                                          to={`/dat-ve/${tgc.maLichChieu}`}
+                                                          className="session"
+                                                          key={index5}
+                                                        >
+                                                          <span className="startTime">
+                                                            {convertTime12To24(
                                                               new Date(
                                                                 tgc.ngayChieuGioChieu
                                                               ).toLocaleTimeString()
-                                                            ),
-                                                            "117"
-                                                          )}
-                                                        </span>
-                                                      </Link>
-                                                    );
+                                                            )}
+                                                            {/* {moment(new Date(tgc.ngayChieuGioChieu.to))} */}
+                                                            {/* {new Date(tgc.ngayChieuGioChieu).toLocaleTimeString()} */}
+                                                          </span>
+                                                          ~
+                                                          <span className="endTime">
+                                                            {calculateEndTime(
+                                                              convertTime12To24(
+                                                                new Date(
+                                                                  tgc.ngayChieuGioChieu
+                                                                ).toLocaleTimeString()
+                                                              ),
+                                                              "117"
+                                                            )}
+                                                          </span>
+                                                        </Link>
+                                                      );
+                                                    } else {
+                                                      return "";
+                                                    }
                                                   }
                                                 )}
                                             </div>
@@ -171,7 +202,9 @@ function ShowTime(props) {
                                         </div>
                                       </div>
                                     );
-                                  } else return null;
+                                  } else {
+                                    return "";
+                                  }
                                 })
                               );
                             } else return null;

@@ -6,7 +6,7 @@ export default function FilmDetail({ movieDetail }) {
   return (
     <div className="phimInfo">
       <div className="thongTinChiTietPhim row">
-        <div className="filmDetailImage col-sm-3">
+        <div className="filmDetailImage col-sm-3" >
           <img src={movieDetail && movieDetail.hinhAnh} alt="" />
         </div>
         <div className="filmDetailInfo col-sm-5">
@@ -21,14 +21,16 @@ export default function FilmDetail({ movieDetail }) {
             {movieDetail && movieDetail.tenPhim}
           </p>
           <p className="filmLength">100 phút - 6.7 IMDb - 2D/Digital</p>
-          <button className="btnMuaVe">Mua vé</button>
+          <a href="#myTabDetail" ><button className="btnMuaVe" style={{
+            width: '100%'
+          }}>Mua vé</button></a>
         </div>
       </div>
       <div className="filmBg">
         <div
-          className="phimBg"
+          className="phimBg"  
           // style={{
-          //   backgroundImage: `url(${movieDetail && movieDetail.hinhAnh})`,
+          //   backgroundImage: `url(${movieDetail?.hinhAnh})`
           // }}
         >
           <img src={movieDetail && movieDetail.hinhAnh} alt="" />

@@ -71,7 +71,7 @@ function ShowTimeDetail({ movieDetail, theaterSystemArray, ...props }) {
       dates.push(current.format("YYYY-MM-DD"));
       current.add(1, "day");
     }
-
+    console.log("dates", dates);
     return (
       <div className="showtime__detail">
         <Tabs defaultActiveKey="0">
@@ -133,20 +133,41 @@ function ShowTimeDetail({ movieDetail, theaterSystemArray, ...props }) {
                           // console.log(timeCurrent)
                           let timeLC = moment(thoigian).format("HH:mm");
 
+                          let nowRealTime = moment(new Date()).format(
+                            "DD.MM.YYYY"
+                          );
+                          // console.log('nowRealTime',nowRealTime)
+                          let endDateRealTime = moment(
+                            nowRealTime,
+                            "DD.MM.YYYY"
+                          );
+                          // console.log('endDateTime',endDateRealTime)
+                          // console.log('thoigianchieu',startDate)
+                          let durationRealTime = endDateRealTime.diff(
+                            startDate,
+                            "days"
+                          );
+                          // console.log('durationReal',durationRealTime)
+                          let isDisabled =
+                            parseTime(timeLC).isBefore(
+                              parseTime(timeCurrent)
+                            ) && durationRealTime === 0;
                           if (duration === 0) {
                             return (
                               <Link
                                 key={index5}
                                 to={`/dat-ve/${tgc.maLichChieu}`}
                                 className="session"
-                                disabled={parseTime(timeLC).isBefore(
-                                  parseTime(timeCurrent)
-                                )}
+                                disabled={isDisabled}
                                 onClick={() => {
                                   console.log(tgc.maLichChieu);
                                 }}
                               >
-                                <span className="startTime">
+                                <span
+                                  className={`startTime ${
+                                    isDisabled ? "btnIsDisabled" : ""
+                                  }`}
+                                >
                                   {convertTime12To24(
                                     new Date(
                                       tgc.ngayChieuGioChieu

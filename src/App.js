@@ -6,7 +6,8 @@ import "antd/dist/antd.css";
 import "./App.scss";
 import { Helmet } from "react-helmet";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {routeHome} from './route';
+import { routeHome } from "./route";
+import ScrollToTop from "./components/ScrollToTop";
 const showLayoutHome = (route) => {
   if (route && route.length > 0) {
     return route.map((item, index) => {
@@ -34,9 +35,8 @@ function App() {
             href="https://s3img.vcdn.vn/123phim/2018/09/459970ce80ca2c762c8c8076b415c06e.png"
           />
         </Helmet>
-        <Switch>
-          {showLayoutHome(routeHome)}
-        </Switch>
+        <ScrollToTop />
+        <Switch>{showLayoutHome(routeHome)}</Switch>
       </BrowserRouter>
     </>
   );
