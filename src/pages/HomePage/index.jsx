@@ -12,7 +12,11 @@ import ShowTime from "../../components/ShowTime";
 function HomePage(props) {
   //   const loading = useSelector((state) => state.listMovieReducer.loading);
   const goToBookingPage = (maLichChieu) => {
-    props.history.push(`/dat-ve/${maLichChieu}`);
+    if (localStorage.getItem("User")) {
+      props.history.push(`/dat-ve/${maLichChieu}`);
+    } else {
+      props.history.push('/dang-nhap')
+    }
   };
   return (
     <>
