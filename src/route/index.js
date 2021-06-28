@@ -1,18 +1,14 @@
-import React from "react";
-// import Booking from '../pages/Booking'
-// import DetailPage from '../pages/DetailPage'
-// import HomeLogIn from '../pages/HomeLogIn'
-// import HomePage from '../pages/HomePage'
-// import HomeSignUp from '../pages/HomeSignUp'
-const Booking = React.lazy(() => import("../pages/Booking"));
-const HomePage = React.lazy(() => import("../pages/HomePage"));
-// const HomePage = React.lazy(async () => {
-//   await new Promise((resolve) => setTimeout(resolve, 2000));
-//   return import("../pages/HomePage");
-// });
-const DetailPage = React.lazy(() => import("../pages/DetailPage"));
-const HomeLogIn = React.lazy(() => import("../pages/HomeLogIn"));
-const HomeSignUp = React.lazy(() => import("../pages/HomeSignUp"));
+// import React from "react";
+import Booking from '../pages/Booking'
+import DetailPage from '../pages/DetailPage'
+import HomeLogIn from '../pages/HomeLogIn'
+import HomePage from '../pages/HomePage'
+import HomeSignUp from '../pages/HomeSignUp'
+// const Booking = React.lazy(() => import("../pages/Booking"));
+// const HomePage = React.lazy(() => import("../pages/HomePage"));
+// const DetailPage = React.lazy(() => import("../pages/DetailPage"));
+// const HomeLogIn = React.lazy(() => import("../pages/HomeLogIn"));
+// const HomeSignUp = React.lazy(() => import("../pages/HomeSignUp"));
 export const routeHome = [
   {
     path: "/",
