@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect} from "react-redux";
 import Carousel from "../../components/Carousel";
 import Footer from "../../components/Footer";
 import HomeApp from "../../components/HomeApp";
@@ -10,26 +10,28 @@ import News from "../../components/News";
 import ShowTime from "../../components/ShowTime";
 // import Loading from "../../components/Loading";
 function HomePage(props) {
-  //   const loading = useSelector((state) => state.listMovieReducer.loading);
+  // const loading = useSelector((state) => state.listMovieReducer.loading);
   const goToBookingPage = (maLichChieu) => {
     if (localStorage.getItem("User")) {
       props.history.push(`/dat-ve/${maLichChieu}`);
     } else {
-      props.history.push('/dang-nhap')
+      props.history.push("/dang-nhap");
     }
   };
-  return (
-    <>
-      <NavbarHome />
-      <Carousel />
-      <HomeTool goToBookingPage={goToBookingPage} />
-      <ListMovie />
-      <ShowTime />
-      <News />
-      <HomeApp />
-      <Footer />
-    </>
-  );
+  
+    return (
+      <>
+        <NavbarHome />
+        <Carousel />
+        <HomeTool goToBookingPage={goToBookingPage} />
+        <ListMovie />
+        <ShowTime />
+        <News />
+        <HomeApp />
+        <Footer />
+      </>
+    );
+  
 }
 const mapStateToProps = (state) => {
   return {

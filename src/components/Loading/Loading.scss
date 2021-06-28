@@ -1,6 +1,22 @@
-#loading{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
+#loading {
+    height: 100vh;
+    .loadingImg {
+        animation: loading 2s infinite;
+    }
+}
+@keyframes loading {
+    0% {
+        transform: rotate(-20deg);
+    }
+
+    25% {
+        transform: rotate(20deg);
+    }
+
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(20deg);
+    }
 }

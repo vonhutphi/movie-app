@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "jquery/dist/jquery.min.js";
@@ -8,6 +9,7 @@ import { Helmet } from "react-helmet";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { routeHome } from "./route";
 import ScrollToTop from "./components/ScrollToTop";
+import Loading from './components/Loading'
 const showLayoutHome = (route) => {
   if (route && route.length > 0) {
     return route.map((item, index) => {
@@ -36,7 +38,10 @@ function App() {
           />
         </Helmet>
         <ScrollToTop />
-        <Switch>{showLayoutHome(routeHome)}</Switch>
+        <Suspense fallback={<Loading/>}>
+          <Switch>{showLayoutHome(routeHome)}</Switch>
+        </Suspense>
+        {/* <Loading/> */}
       </BrowserRouter>
     </>
   );
